@@ -12,8 +12,8 @@ export default function ContactoPage() {
       <section className="bg-[#0f0f0f] pt-36 pb-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center gap-3 mb-3">
-            <span className="w-8 h-px bg-[#1E40AF]" />
-            <span className="text-[#1E40AF] text-xs font-bold uppercase tracking-widest">Estamos para ayudarte</span>
+            <span className="w-8 h-px bg-[#1A3A8A]" />
+            <span className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Estamos para ayudarte</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-black text-white">
             Contáctanos
@@ -21,7 +21,7 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <div className="h-px bg-[#1E40AF]" />
+      <div className="h-px bg-[#1A3A8A]" />
 
       <section className="py-20 bg-[#0f0f0f]">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
@@ -32,44 +32,44 @@ export default function ContactoPage() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 border border-[#1E40AF] flex items-center justify-center shrink-0">
-                  <span className="text-[#1E40AF] font-black text-xs">WA</span>
+                <div className="w-10 h-10 border border-[#1A3A8A] flex items-center justify-center shrink-0">
+                  <span className="text-[#1A3A8A] font-black text-xs">WA</span>
                 </div>
                 <div>
                   <div className="text-white font-bold mb-1">WhatsApp</div>
-                  <a href="https://wa.me/593999427291" target="_blank" className="text-gray-400 hover:text-[#1E40AF] transition-colors">
+                  <a href="https://wa.me/593999427291" target="_blank" className="text-gray-400 hover:text-[#1A3A8A] transition-colors">
                     0999427291
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 border border-[#1E40AF] flex items-center justify-center shrink-0">
-                  <span className="text-[#1E40AF] font-black text-xs">📞</span>
+                <div className="w-10 h-10 border border-[#1A3A8A] flex items-center justify-center shrink-0">
+                  <span className="text-[#1A3A8A] font-black text-xs">📞</span>
                 </div>
                 <div>
                   <div className="text-white font-bold mb-1">Teléfono</div>
-                  <a href="tel:042938828" className="text-gray-400 hover:text-[#1E40AF] transition-colors">
+                  <a href="tel:042938828" className="text-gray-400 hover:text-[#1A3A8A] transition-colors">
                     042938828
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 border border-[#1E40AF] flex items-center justify-center shrink-0">
-                  <span className="text-[#1E40AF] font-black text-xs">@</span>
+                <div className="w-10 h-10 border border-[#1A3A8A] flex items-center justify-center shrink-0">
+                  <span className="text-[#1A3A8A] font-black text-xs">@</span>
                 </div>
                 <div>
                   <div className="text-white font-bold mb-1">Email</div>
-                  <a href="mailto:gerencia@federicocedeno.com" className="text-gray-400 hover:text-[#1E40AF] transition-colors">
+                  <a href="mailto:gerencia@federicocedeno.com" className="text-gray-400 hover:text-[#1A3A8A] transition-colors">
                     gerencia@federicocedeno.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 border border-[#1E40AF] flex items-center justify-center shrink-0">
-                  <span className="text-[#1E40AF] font-black text-xs">📍</span>
+                <div className="w-10 h-10 border border-[#1A3A8A] flex items-center justify-center shrink-0">
+                  <span className="text-[#1A3A8A] font-black text-xs">📍</span>
                 </div>
                 <div>
                   <div className="text-white font-bold mb-1">Ubicación</div>
@@ -82,12 +82,12 @@ export default function ContactoPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 border border-[#1E40AF] flex items-center justify-center shrink-0">
-                  <span className="text-[#1E40AF] font-black text-xs">IG</span>
+                <div className="w-10 h-10 border border-[#1A3A8A] flex items-center justify-center shrink-0">
+                  <span className="text-[#1A3A8A] font-black text-xs">IG</span>
                 </div>
                 <div>
                   <div className="text-white font-bold mb-1">Instagram</div>
-                  <a href="https://www.instagram.com/cedemotor/" target="_blank" className="text-gray-400 hover:text-[#1E40AF] transition-colors">
+                  <a href="https://www.instagram.com/cedemotor/" target="_blank" className="text-gray-400 hover:text-[#1A3A8A] transition-colors">
                     @cedemotor
                   </a>
                 </div>

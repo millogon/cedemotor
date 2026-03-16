@@ -12,16 +12,16 @@ export default function NosotrosPage() {
       <section className="bg-[#0f0f0f] pt-36 pb-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center gap-3 mb-3">
-            <span className="w-8 h-px bg-[#1E40AF]" />
-            <span className="text-[#1E40AF] text-xs font-bold uppercase tracking-widest">Nuestra historia</span>
+            <span className="w-8 h-px bg-[#1A3A8A]" />
+            <span className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Nuestra historia</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-black text-white">
-            Quiénes <span className="text-[#1E40AF]">Somos</span>
+            Quiénes <span className="text-[#1A3A8A]">Somos</span>
           </h1>
         </div>
       </section>
 
-      <div className="h-px bg-[#1E40AF]" />
+      <div className="h-px bg-[#1A3A8A]" />
 
       {/* Contenido */}
       <section className="py-20 bg-[#0f0f0f]">
@@ -46,9 +46,9 @@ export default function NosotrosPage() {
                 { value: "100%", label: "Clientes satisfechos" },
                 { value: "0", label: "Sorpresas desagradables" },
               ].map((s) => (
-                <div key={s.label} className="border border-gray-800 hover:border-[#1E40AF] p-6 transition-colors group">
-                  <div className="text-4xl font-black text-white mb-2 group-hover:text-[#1E40AF] transition-colors">{s.value}</div>
-                  <div className="text-xs text-[#1E40AF] font-bold uppercase tracking-widest">{s.label}</div>
+                <div key={s.label} className="border border-gray-800 hover:border-[#1A3A8A] p-6 transition-colors group">
+                  <div className="text-4xl font-black text-white mb-2 group-hover:text-[#1A3A8A] transition-colors">{s.value}</div>
+                  <div className="text-xs text-[#1A3A8A] font-bold uppercase tracking-widest">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -60,8 +60,8 @@ export default function NosotrosPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center gap-3 mb-12">
-            <span className="w-8 h-px bg-[#1E40AF]" />
-            <span className="text-[#1E40AF] text-xs font-bold uppercase tracking-widest">Nuestros valores</span>
+            <span className="w-8 h-px bg-[#1A3A8A]" />
+            <span className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Nuestros valores</span>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -69,8 +69,8 @@ export default function NosotrosPage() {
               { title: "Calidad", desc: "Solo ofrecemos autos que nosotros mismos compraríamos." },
               { title: "Confianza", desc: "Más de 500 familias nos han elegido y eso nos compromete." },
             ].map((v) => (
-              <div key={v.title} className="border border-gray-200 p-8 hover:border-t-4 hover:border-t-[#1E40AF] hover:shadow-md transition-all">
-                <div className="w-8 h-[3px] bg-[#1E40AF] mb-4" />
+              <div key={v.title} className="border border-gray-200 p-8 hover:border-t-4 hover:border-t-[#1A3A8A] hover:shadow-md transition-all">
+                <div className="w-8 h-[3px] bg-[#1A3A8A] mb-4" />
                 <h3 className="text-lg font-black text-[#111] mb-3">{v.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
               </div>

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -24,15 +25,15 @@ export default function Header() {
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "shadow-xl" : ""}`}>
       {/* Top bar */}
-      <div className="bg-[#0a0a0a] text-gray-400 text-xs px-4 py-2 border-b border-[#1E40AF]/30">
+      <div className="bg-[#0a0a0a] text-gray-400 text-xs px-4 py-2 border-b border-[#1A3A8A]/30">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
           <div className="flex gap-6">
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1E40AF] inline-block" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1A3A8A] inline-block" />
               0999427291
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1E40AF] inline-block" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1A3A8A] inline-block" />
               gerencia@federicocedeno.com
             </span>
           </div>
@@ -43,13 +44,17 @@ export default function Header() {
       {/* Main nav */}
       <div className="bg-[#111] border-b border-gray-800">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center py-4 gap-3">
-            <div className="w-8 h-8 bg-[#1E40AF] flex items-center justify-center">
-              <span className="text-black font-black text-xs">FC</span>
-            </div>
+          <Link href="/" className="flex items-center py-3 gap-3">
+            <Image
+              src="/logo.jpg"
+              alt="Federico Cedeño Vehículos"
+              width={52}
+              height={52}
+              className="rounded-full"
+            />
             <div>
               <div className="text-white font-black text-sm leading-tight">Federico Cedeño</div>
-              <div className="text-[#1E40AF] text-xs font-bold uppercase tracking-widest">Vehículos</div>
+              <div className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Vehículos</div>
             </div>
           </Link>
 
@@ -62,10 +67,10 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`relative flex items-center h-full px-5 py-5 text-sm font-semibold transition-all duration-200 group
-                    ${active ? "text-[#1E40AF]" : "text-gray-400 hover:text-[#1E40AF]"}`}
+                    ${active ? "text-[#1A3A8A]" : "text-gray-400 hover:text-[#1A3A8A]"}`}
                 >
                   <span>{link.label}</span>
-                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[3px] bg-[#1E40AF] transition-all duration-200
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[3px] bg-[#1A3A8A] transition-all duration-200
                     ${active ? "w-full" : "w-0 group-hover:w-full"}`} />
                 </Link>
               );
@@ -73,7 +78,7 @@ export default function Header() {
             <Link
               href="https://wa.me/593999427291"
               target="_blank"
-              className="ml-4 px-5 py-2.5 bg-[#1E40AF] text-white font-bold text-sm uppercase tracking-widest hover:bg-[#1532871] transition-colors"
+              className="ml-4 px-5 py-2.5 bg-[#1A3A8A] text-white font-bold text-sm uppercase tracking-widest hover:bg-[#1532871] transition-colors"
             >
               WhatsApp
             </Link>
@@ -105,7 +110,7 @@ export default function Header() {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className={`flex items-center gap-3 px-6 py-4 text-sm font-semibold border-b border-gray-800 transition-colors
-                    ${active ? "text-[#1E40AF] border-l-4 border-l-[#1E40AF]" : "text-gray-400 hover:text-[#1E40AF]"}`}
+                    ${active ? "text-[#1A3A8A] border-l-4 border-l-[#1A3A8A]" : "text-gray-400 hover:text-[#1A3A8A]"}`}
                 >
                   {link.label}
                 </Link>
@@ -114,7 +119,7 @@ export default function Header() {
             <a
               href="https://wa.me/593999427291"
               target="_blank"
-              className="flex items-center gap-3 px-6 py-4 text-sm font-bold text-[#1E40AF] border-b border-gray-800"
+              className="flex items-center gap-3 px-6 py-4 text-sm font-bold text-[#1A3A8A] border-b border-gray-800"
             >
               WhatsApp
             </a>
