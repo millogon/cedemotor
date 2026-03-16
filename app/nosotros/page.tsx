@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
@@ -9,19 +10,29 @@ export default function NosotrosPage() {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="bg-[#0f0f0f] pt-36 pb-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="w-8 h-px bg-[#1A3A8A]" />
-            <span className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Nuestra historia</span>
+      <section className="relative h-64 md:h-80 overflow-hidden mt-24">
+        <Image
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1400&h=500&fit=crop"
+          alt="Quiénes somos"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1f3c] via-[#0d1f3c]/80 to-transparent" />
+        <div className="relative h-full flex items-center">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="w-8 h-px bg-[#6b9fd4]" />
+              <span className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Nuestra historia</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-black text-white">
+              Quiénes <span className="text-[#6b9fd4]">Somos</span>
+            </h1>
           </div>
-          <h1 className="text-4xl md:text-5xl font-black text-white">
-            Quiénes <span className="text-[#1A3A8A]">Somos</span>
-          </h1>
         </div>
       </section>
 
-      <div className="h-px bg-[#1A3A8A]" />
+      <div className="h-[3px] bg-[#1A3A8A]" />
 
       {/* Contenido */}
       <section className="py-20 bg-[#0f0f0f]">

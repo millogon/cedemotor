@@ -11,22 +11,33 @@ export default function CatalogoPage() {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="bg-[#0f0f0f] pt-36 pb-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="w-8 h-px bg-[#1A3A8A]" />
-            <span className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Todos los vehículos</span>
+      <section className="relative h-64 md:h-80 overflow-hidden mt-24">
+        <Image
+          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1400&h=500&fit=crop"
+          alt="Catálogo de autos"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Degradé de derecha a izquierda */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1f3c] via-[#0d1f3c]/80 to-transparent" />
+        <div className="relative h-full flex items-center">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="w-8 h-px bg-[#6b9fd4]" />
+              <span className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Todos los vehículos</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-black text-white">
+              Catálogo de <span className="text-[#6b9fd4]">Autos</span>
+            </h1>
+            <p className="text-gray-300 mt-3 max-w-md text-sm">
+              Vehículos casi nuevos verificados y con garantía.
+            </p>
           </div>
-          <h1 className="text-4xl md:text-5xl font-black text-white">
-            Catálogo de <span className="text-[#1A3A8A]">Autos</span>
-          </h1>
-          <p className="text-gray-400 mt-4 max-w-lg">
-            Encuentra tu vehículo ideal entre nuestra selección de autos casi nuevos. Todos verificados y con garantía.
-          </p>
         </div>
       </section>
 
-      <div className="h-px bg-[#1A3A8A]" />
+      <div className="h-[3px] bg-[#1A3A8A]" />
 
       {/* Listado */}
       <section className="py-16 bg-[#0f0f0f]">
