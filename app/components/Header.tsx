@@ -81,25 +81,13 @@ export default function Header() {
               );
             })}
 
-            {/* Foto de Federico + WhatsApp */}
-            <div className="flex items-center gap-3 ml-3 pl-3 border-l border-[#1A3A8A]/40">
-              <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#1A3A8A] shrink-0">
-                <Image
-                  src="/federico.jpeg"
-                  alt="Federico Cedeño"
-                  width={40}
-                  height={40}
-                  className="object-cover object-top w-full h-full"
-                />
-              </div>
-              <a
-                href="https://wa.me/593999427291"
-                target="_blank"
-                className="px-4 py-2 bg-[#1A3A8A] text-white font-bold text-sm uppercase tracking-widest hover:bg-[#22499e] transition-colors"
-              >
-                WhatsApp
-              </a>
-            </div>
+            <a
+              href="https://wa.me/593999427291"
+              target="_blank"
+              className="ml-3 px-4 py-2 bg-[#1A3A8A] text-white font-bold text-sm uppercase tracking-widest hover:bg-[#22499e] transition-colors"
+            >
+              WhatsApp
+            </a>
           </nav>
 
           {/* Mobile button */}
@@ -120,13 +108,6 @@ export default function Header() {
         {/* Mobile menu */}
         {open && (
           <div className="md:hidden border-t border-[#1A3A8A]/30 bg-[#0d1f3c]">
-            {/* Foto mobile */}
-            <div className="flex items-center gap-3 px-6 py-4 border-b border-[#1A3A8A]/20">
-              <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#1A3A8A]">
-                <Image src="/federico.jpeg" alt="Federico Cedeño" width={40} height={40} className="object-cover object-top" />
-              </div>
-              <span className="text-white text-sm font-semibold">Federico Cedeño</span>
-            </div>
             {navLinks.map((link) => {
               const active = pathname === link.href;
               return (

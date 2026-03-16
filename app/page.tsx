@@ -92,14 +92,26 @@ export default function Home() {
       <section className="py-24 bg-[#0f0f0f] relative overflow-hidden">
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-            <div>
-              <div className="flex items-center gap-3 mb-3">
-                <span className="w-8 h-px bg-[#1A3A8A]" />
-                <span className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Disponibles ahora</span>
+            {/* Título + Foto de Federico */}
+            <div className="flex items-end gap-6">
+              <div className="w-20 h-20 rounded-full overflow-hidden ring-4 ring-[#1A3A8A] shrink-0">
+                <Image
+                  src="/federico.jpeg"
+                  alt="Federico Cedeño"
+                  width={80}
+                  height={80}
+                  className="object-cover object-top w-full h-full"
+                />
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
-                Autos<br /><span className="text-[#1A3A8A]">Destacados</span>
-              </h2>
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-8 h-px bg-[#1A3A8A]" />
+                  <span className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Disponibles ahora</span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                  Autos<br /><span className="text-[#6b9fd4]">Destacados</span>
+                </h2>
+              </div>
             </div>
             <Link
               href="/catalogo"
