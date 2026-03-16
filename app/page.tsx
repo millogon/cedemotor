@@ -5,12 +5,6 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { autos } from "./data/autos";
 
-const stats = [
-  { value: "10+", label: "Años de experiencia" },
-  { value: "500+", label: "Autos vendidos" },
-  { value: "100%", label: "Garantía de calidad" },
-  { value: "24h", label: "Respuesta rápida" },
-];
 
 export default function Home() {
   const autosDisponibles = autos.filter((a) => a.disponible).slice(0, 3);
@@ -58,32 +52,23 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="hidden md:grid grid-cols-2 gap-4">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="border border-gray-700 bg-black/30 p-6 hover:border-[#1A3A8A] transition-colors group"
-              >
-                <div className="text-5xl font-black text-white mb-2 group-hover:text-[#1A3A8A] transition-colors">
-                  {s.value}
-                </div>
-                <div className="text-sm font-bold text-[#1A3A8A] uppercase tracking-widest">{s.label}</div>
-                <div className="w-8 h-px bg-[#1A3A8A] mt-3 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+          {/* Foto Federico */}
+          <div className="hidden md:flex items-center justify-center">
+            <div className="relative w-80 h-96 overflow-hidden shadow-2xl ring-4 ring-[#1A3A8A]/40">
+              <Image
+                src="/federico.jpeg"
+                alt="Federico Cedeño"
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0d1f3c]/60 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="text-white font-black text-lg">Federico Cedeño</div>
+                <div className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Propietario · Guayaquil</div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* STATS MOBILE */}
-      <section className="md:hidden bg-[#0f0f0f] border-t border-gray-800 grid grid-cols-2">
-        {stats.map((s, i) => (
-          <div key={s.label} className={`p-6 text-center ${i % 2 === 0 ? "border-r border-gray-800" : ""} border-b border-gray-800`}>
-            <div className="text-4xl font-black text-white">{s.value}</div>
-            <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">{s.label}</div>
-          </div>
-        ))}
       </section>
 
       <div className="h-px bg-gradient-to-r from-transparent via-[#1A3A8A] to-transparent" />
@@ -92,26 +77,14 @@ export default function Home() {
       <section className="py-24 bg-[#0f0f0f] relative overflow-hidden">
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-            {/* Título + Foto de Federico */}
-            <div className="flex items-end gap-6">
-              <div className="w-20 h-20 rounded-full overflow-hidden ring-4 ring-[#1A3A8A] shrink-0">
-                <Image
-                  src="/federico.jpeg"
-                  alt="Federico Cedeño"
-                  width={80}
-                  height={80}
-                  className="object-cover object-top w-full h-full"
-                />
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="w-8 h-px bg-[#1A3A8A]" />
+                <span className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Disponibles ahora</span>
               </div>
-              <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="w-8 h-px bg-[#1A3A8A]" />
-                  <span className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Disponibles ahora</span>
-                </div>
-                <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
-                  Autos<br /><span className="text-[#6b9fd4]">Destacados</span>
-                </h2>
-              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                Autos<br /><span className="text-[#6b9fd4]">Destacados</span>
+              </h2>
             </div>
             <Link
               href="/catalogo"
