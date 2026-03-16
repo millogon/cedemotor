@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "shadow-xl" : ""}`}>
       {/* Top bar */}
-      <div className="bg-[#0a0a0a] text-gray-400 text-xs px-4 py-2 border-b border-[#1A3A8A]/30">
+      <div className="bg-[#071428] text-gray-400 text-xs px-4 py-2 border-b border-[#1A3A8A]/40">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
           <div className="flex gap-6">
             <span className="flex items-center gap-1.5">
@@ -42,32 +42,37 @@ export default function Header() {
       </div>
 
       {/* Main nav */}
-      <div className="bg-[#111] border-b border-gray-800">
+      <div className="bg-[#0d1f3c] border-b border-[#1A3A8A]/30">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+
+          {/* Logo + Nombre + Foto */}
           <Link href="/" className="flex items-center py-3 gap-3">
-            <Image
-              src="/logo.jpg"
-              alt="Federico Cedeño Vehículos"
-              width={52}
-              height={52}
-              className="rounded-full"
-            />
+            {/* Logo — rounded-full recorta el fondo blanco */}
+            <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 ring-2 ring-[#1A3A8A]">
+              <Image
+                src="/logo.jpg"
+                alt="Logo Federico Cedeño"
+                width={64}
+                height={64}
+                className="object-cover w-full h-full scale-110"
+              />
+            </div>
             <div>
-              <div className="text-white font-black text-sm leading-tight">Federico Cedeño</div>
-              <div className="text-[#1A3A8A] text-xs font-bold uppercase tracking-widest">Vehículos</div>
+              <div className="text-white font-black text-base leading-tight">Federico Cedeño</div>
+              <div className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Vehículos · Guayaquil</div>
             </div>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center h-full">
+          <nav className="hidden md:flex items-center h-full gap-1">
             {navLinks.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative flex items-center h-full px-5 py-5 text-sm font-semibold transition-all duration-200 group
-                    ${active ? "text-[#1A3A8A]" : "text-gray-400 hover:text-[#1A3A8A]"}`}
+                  className={`relative flex items-center h-full px-4 py-5 text-sm font-semibold transition-all duration-200 group
+                    ${active ? "text-white" : "text-gray-400 hover:text-white"}`}
                 >
                   <span>{link.label}</span>
                   <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[3px] bg-[#1A3A8A] transition-all duration-200
@@ -75,13 +80,26 @@ export default function Header() {
                 </Link>
               );
             })}
-            <Link
-              href="https://wa.me/593999427291"
-              target="_blank"
-              className="ml-4 px-5 py-2.5 bg-[#1A3A8A] text-white font-bold text-sm uppercase tracking-widest hover:bg-[#1532871] transition-colors"
-            >
-              WhatsApp
-            </Link>
+
+            {/* Foto de Federico + WhatsApp */}
+            <div className="flex items-center gap-3 ml-3 pl-3 border-l border-[#1A3A8A]/40">
+              <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#1A3A8A] shrink-0">
+                <Image
+                  src="/federico.jpeg"
+                  alt="Federico Cedeño"
+                  width={40}
+                  height={40}
+                  className="object-cover object-top w-full h-full"
+                />
+              </div>
+              <a
+                href="https://wa.me/593999427291"
+                target="_blank"
+                className="px-4 py-2 bg-[#1A3A8A] text-white font-bold text-sm uppercase tracking-widest hover:bg-[#22499e] transition-colors"
+              >
+                WhatsApp
+              </a>
+            </div>
           </nav>
 
           {/* Mobile button */}
@@ -101,7 +119,14 @@ export default function Header() {
 
         {/* Mobile menu */}
         {open && (
-          <div className="md:hidden border-t border-gray-800 bg-[#111]">
+          <div className="md:hidden border-t border-[#1A3A8A]/30 bg-[#0d1f3c]">
+            {/* Foto mobile */}
+            <div className="flex items-center gap-3 px-6 py-4 border-b border-[#1A3A8A]/20">
+              <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#1A3A8A]">
+                <Image src="/federico.jpeg" alt="Federico Cedeño" width={40} height={40} className="object-cover object-top" />
+              </div>
+              <span className="text-white text-sm font-semibold">Federico Cedeño</span>
+            </div>
             {navLinks.map((link) => {
               const active = pathname === link.href;
               return (
@@ -109,8 +134,8 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={`flex items-center gap-3 px-6 py-4 text-sm font-semibold border-b border-gray-800 transition-colors
-                    ${active ? "text-[#1A3A8A] border-l-4 border-l-[#1A3A8A]" : "text-gray-400 hover:text-[#1A3A8A]"}`}
+                  className={`flex items-center gap-3 px-6 py-4 text-sm font-semibold border-b border-[#1A3A8A]/20 transition-colors
+                    ${active ? "text-white border-l-4 border-l-[#1A3A8A]" : "text-gray-400 hover:text-white"}`}
                 >
                   {link.label}
                 </Link>
@@ -119,7 +144,7 @@ export default function Header() {
             <a
               href="https://wa.me/593999427291"
               target="_blank"
-              className="flex items-center gap-3 px-6 py-4 text-sm font-bold text-[#1A3A8A] border-b border-gray-800"
+              className="flex items-center gap-3 px-6 py-4 text-sm font-bold text-[#6b9fd4]"
             >
               WhatsApp
             </a>
