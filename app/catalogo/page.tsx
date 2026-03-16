@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
@@ -33,12 +34,13 @@ export default function CatalogoPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {autos.map((auto) => (
               <div key={auto.id} className={`border transition-all duration-200 group bg-[#111] ${auto.disponible ? "border-gray-800 hover:border-[#1A3A8A]" : "border-gray-900 opacity-60"}`}>
-                {/* Imagen placeholder */}
-                <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🚗</div>
-                    <div className="text-gray-500 text-sm">{auto.marca} {auto.modelo}</div>
-                  </div>
+                <div className="h-48 relative overflow-hidden">
+                  <Image
+                    src={auto.imagen}
+                    alt={`${auto.marca} ${auto.modelo}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                   <div className="absolute top-3 right-3 bg-[#1A3A8A] text-white text-xs font-black px-2 py-1">
                     {auto.año}
                   </div>

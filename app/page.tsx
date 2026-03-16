@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -111,12 +112,13 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {autosDisponibles.map((auto) => (
               <div key={auto.id} className="border border-gray-800 hover:border-[#1A3A8A] transition-all duration-200 group bg-[#111]">
-                {/* Imagen placeholder */}
-                <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🚗</div>
-                    <div className="text-gray-500 text-sm">{auto.marca} {auto.modelo}</div>
-                  </div>
+                <div className="h-48 relative overflow-hidden">
+                  <Image
+                    src={auto.imagen}
+                    alt={`${auto.marca} ${auto.modelo}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                   <div className="absolute top-3 right-3 bg-[#1A3A8A] text-white text-xs font-black px-2 py-1">
                     {auto.año}
                   </div>

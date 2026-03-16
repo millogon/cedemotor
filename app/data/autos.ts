@@ -10,6 +10,7 @@ export type Auto = {
   combustible: string;
   descripcion: string;
   disponible: boolean;
+  imagen: string;
 };
 
 export const autos: Auto[] = [
@@ -25,6 +26,7 @@ export const autos: Auto[] = [
     combustible: "Gasolina",
     descripcion: "Excelente estado, único dueño, mantenimientos al día.",
     disponible: true,
+    imagen: "https://images.unsplash.com/photo-1623869675781-80aa31012a5a?w=600&h=400&fit=crop",
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ export const autos: Auto[] = [
     combustible: "Gasolina",
     descripcion: "SUV en perfecto estado, con todos los accesorios de fábrica.",
     disponible: true,
+    imagen: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&h=400&fit=crop",
   },
   {
     id: 3,
@@ -51,6 +54,7 @@ export const autos: Auto[] = [
     combustible: "Gasolina",
     descripcion: "Como nuevo, sin choques, papeles en regla.",
     disponible: true,
+    imagen: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop",
   },
   {
     id: 4,
@@ -64,6 +68,7 @@ export const autos: Auto[] = [
     combustible: "Gasolina",
     descripcion: "Casi nuevo, ideal para ciudad, bajo consumo.",
     disponible: true,
+    imagen: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&h=400&fit=crop",
   },
   {
     id: 5,
@@ -77,6 +82,7 @@ export const autos: Auto[] = [
     combustible: "Gasolina",
     descripcion: "Sedán cómodo y económico, excelente para familia.",
     disponible: true,
+    imagen: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=400&fit=crop",
   },
   {
     id: 6,
@@ -90,5 +96,6 @@ export const autos: Auto[] = [
     combustible: "Gasolina",
     descripcion: "SUV premium, interior de lujo, sin detalles.",
     disponible: false,
+    imagen: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop",
   },
 ];
