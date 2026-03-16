@@ -16,6 +16,12 @@ export default function Header() {
   const [atTop, setAtTop] = useState(true);
   const pathname = usePathname();
 
+  // Cada vez que cambia de página, resetear al tope
+  useEffect(() => {
+    setAtTop(true);
+    setOpen(false);
+  }, [pathname]);
+
   useEffect(() => {
     const onScroll = () => {
       setAtTop(window.scrollY <= 10);
@@ -27,7 +33,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-transform duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-transform duration-300 ${
         atTop ? "translate-y-0" : "-translate-y-full"
       }`}
     >

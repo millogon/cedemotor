@@ -11,7 +11,7 @@ export default function CatalogoPage() {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="relative h-64 md:h-80 overflow-hidden mt-[90px]">
+      <section className="relative h-72 md:h-96 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1400&h=500&fit=crop"
           alt="Catálogo de autos"
@@ -19,21 +19,19 @@ export default function CatalogoPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/60 to-black" />
-        <div className="relative h-full flex items-center">
-          <div className="w-full max-w-6xl mx-auto px-6 flex justify-end">
-            <div className="text-right">
-              <div className="flex items-center justify-end gap-3 mb-3">
-                <span className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Todos los vehículos</span>
-                <span className="w-8 h-px bg-[#6b9fd4]" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-black text-white">
-                Catálogo de <span className="text-[#6b9fd4]">Autos</span>
-              </h1>
-              <p className="text-gray-300 mt-3 max-w-md text-sm">
-                Vehículos casi nuevos verificados y con garantía.
-              </p>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+        <div className="relative h-full flex items-end pb-10 pt-[90px]">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="w-8 h-px bg-[#6b9fd4]" />
+              <span className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Todos los vehículos</span>
             </div>
+            <h1 className="text-4xl md:text-5xl font-black text-white">
+              Catálogo de <span className="text-[#6b9fd4]">Autos</span>
+            </h1>
+            <p className="text-gray-300 mt-3 max-w-md text-sm">
+              Vehículos casi nuevos verificados y con garantía.
+            </p>
           </div>
         </div>
       </section>
