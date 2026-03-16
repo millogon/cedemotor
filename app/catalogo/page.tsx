@@ -20,8 +20,8 @@ export default function CatalogoPage() {
           priority
         />
         {/* Degradé de derecha a izquierda */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1f3c] via-[#0d1f3c]/80 to-transparent" />
-        <div className="relative h-full flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-l from-black via-black/80 to-transparent" />
+        <div className="relative h-full flex items-center justify-end">
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex items-center gap-3 mb-3">
               <span className="w-8 h-px bg-[#6b9fd4]" />
