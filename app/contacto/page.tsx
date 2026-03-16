@@ -10,7 +10,7 @@ export default function ContactoPage() {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="relative h-64 md:h-80 overflow-hidden mt-24">
+      <section className="relative h-64 md:h-80 overflow-hidden mt-[90px]">
         <Image
           src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1400&h=500&fit=crop"
           alt="Contacto"

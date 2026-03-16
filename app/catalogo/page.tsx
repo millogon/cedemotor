@@ -11,7 +11,7 @@ export default function CatalogoPage() {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="relative h-64 md:h-80 overflow-hidden mt-24">
+      <section className="relative h-64 md:h-80 overflow-hidden mt-[90px]">
         <Image
           src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1400&h=500&fit=crop"
           alt="Catálogo de autos"

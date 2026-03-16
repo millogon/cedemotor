@@ -10,7 +10,7 @@ export default function NosotrosPage() {
       <WhatsAppButton />
 
       {/* Hero */}
-      <section className="relative h-64 md:h-80 overflow-hidden mt-24">
+      <section className="relative h-64 md:h-80 overflow-hidden mt-[90px]">
         <Image
           src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1400&h=500&fit=crop"
           alt="Quiénes somos"

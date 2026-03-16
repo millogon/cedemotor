@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -13,17 +13,36 @@ const navLinks = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY <= 10) {
+        // Siempre visible en la parte superior
+        setVisible(true);
+      } else if (currentY > lastScrollY.current) {
+        // Bajando → esconder
+        setVisible(false);
+        setOpen(false);
+      } else {
+        // Subiendo → mostrar
+        setVisible(true);
+      }
+      lastScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "shadow-xl" : ""}`}>
+    <header
+      className={`fixed w-full z-50 transition-transform duration-300 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       {/* Top bar */}
       <div className="bg-[#071428] text-gray-400 text-xs px-4 py-2 border-b border-[#1A3A8A]/40">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
@@ -45,9 +64,7 @@ export default function Header() {
       <div className="bg-[#0d1f3c] border-b border-[#1A3A8A]/30">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
 
-          {/* Logo + Nombre + Foto */}
           <Link href="/" className="flex items-center py-3 gap-3">
-            {/* Logo — rounded-full recorta el fondo blanco */}
             <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 ring-2 ring-[#1A3A8A]">
               <Image
                 src="/logo.jpg"
@@ -80,7 +97,6 @@ export default function Header() {
                 </Link>
               );
             })}
-
             <a
               href="https://wa.me/593999427291"
               target="_blank"
