@@ -21,7 +21,7 @@ export default function CatalogoPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
         <div className="relative h-full flex items-end pb-10 pt-[90px]">
-          <div className="max-w-6xl mx-auto px-6">
+          <div className="px-8">
             <div className="flex items-center gap-3 mb-3">
               <span className="w-8 h-px bg-[#6b9fd4]" />
               <span className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Todos los vehículos</span>
