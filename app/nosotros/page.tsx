@@ -18,16 +18,18 @@ export default function NosotrosPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-black via-black/80 to-transparent" />
-        <div className="relative h-full flex items-center justify-end">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-px bg-[#6b9fd4]" />
-              <span className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Nuestra historia</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/60 to-black" />
+        <div className="relative h-full flex items-center">
+          <div className="w-full max-w-6xl mx-auto px-6 flex justify-end">
+            <div className="text-right">
+              <div className="flex items-center justify-end gap-3 mb-3">
+                <span className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Nuestra historia</span>
+                <span className="w-8 h-px bg-[#6b9fd4]" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-black text-white">
+                Quiénes <span className="text-[#6b9fd4]">Somos</span>
+              </h1>
             </div>
-            <h1 className="text-4xl md:text-5xl font-black text-white">
-              Quiénes <span className="text-[#6b9fd4]">Somos</span>
-            </h1>
           </div>
         </div>
       </section>
@@ -49,7 +51,6 @@ export default function NosotrosPage() {
                 Cada vehículo que ofrecemos pasa por una revisión técnica completa. Nos aseguramos de que lo que vendes sea exactamente lo que recibes.
               </p>
             </div>
-
             <div className="grid grid-cols-2 gap-4">
               {[
                 { value: "10+", label: "Años en el mercado" },

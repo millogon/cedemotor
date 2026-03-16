@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -13,25 +13,13 @@ const navLinks = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const lastScrollY = useRef(0);
+  const [atTop, setAtTop] = useState(true);
   const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => {
-      const currentY = window.scrollY;
-      if (currentY <= 10) {
-        // Siempre visible en la parte superior
-        setVisible(true);
-      } else if (currentY > lastScrollY.current) {
-        // Bajando → esconder
-        setVisible(false);
-        setOpen(false);
-      } else {
-        // Subiendo → mostrar
-        setVisible(true);
-      }
-      lastScrollY.current = currentY;
+      setAtTop(window.scrollY <= 10);
+      if (window.scrollY > 10) setOpen(false);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -40,7 +28,7 @@ export default function Header() {
   return (
     <header
       className={`fixed w-full z-50 transition-transform duration-300 ${
-        visible ? "translate-y-0" : "-translate-y-full"
+        atTop ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       {/* Top bar */}
@@ -63,7 +51,6 @@ export default function Header() {
       {/* Main nav */}
       <div className="bg-[#0d1f3c] border-b border-[#1A3A8A]/30">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
-
           <Link href="/" className="flex items-center py-3 gap-3">
             <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 ring-2 ring-[#1A3A8A]">
               <Image
@@ -80,7 +67,6 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center h-full gap-1">
             {navLinks.map((link) => {
               const active = pathname === link.href;
@@ -106,7 +92,6 @@ export default function Header() {
             </a>
           </nav>
 
-          {/* Mobile button */}
           <button
             className="md:hidden text-gray-300 focus:outline-none p-2"
             onClick={() => setOpen(!open)}
@@ -121,7 +106,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {open && (
           <div className="md:hidden border-t border-[#1A3A8A]/30 bg-[#0d1f3c]">
             {navLinks.map((link) => {

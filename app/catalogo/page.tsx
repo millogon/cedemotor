@@ -19,20 +19,21 @@ export default function CatalogoPage() {
           className="object-cover object-center"
           priority
         />
-        {/* Degradé de derecha a izquierda */}
-        <div className="absolute inset-0 bg-gradient-to-l from-black via-black/80 to-transparent" />
-        <div className="relative h-full flex items-center justify-end">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-px bg-[#6b9fd4]" />
-              <span className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Todos los vehículos</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/60 to-black" />
+        <div className="relative h-full flex items-center">
+          <div className="w-full max-w-6xl mx-auto px-6 flex justify-end">
+            <div className="text-right">
+              <div className="flex items-center justify-end gap-3 mb-3">
+                <span className="text-[#6b9fd4] text-xs font-bold uppercase tracking-widest">Todos los vehículos</span>
+                <span className="w-8 h-px bg-[#6b9fd4]" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-black text-white">
+                Catálogo de <span className="text-[#6b9fd4]">Autos</span>
+              </h1>
+              <p className="text-gray-300 mt-3 max-w-md text-sm">
+                Vehículos casi nuevos verificados y con garantía.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-black text-white">
-              Catálogo de <span className="text-[#6b9fd4]">Autos</span>
-            </h1>
-            <p className="text-gray-300 mt-3 max-w-md text-sm">
-              Vehículos casi nuevos verificados y con garantía.
-            </p>
           </div>
         </div>
       </section>

@@ -15,7 +15,7 @@ export default function Home() {
       <WhatsAppButton />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center bg-[#0f0f0f] pt-24">
+      <section className="relative min-h-screen flex items-center bg-[#0f0f0f] pt-[90px]">
         <div className="absolute inset-0 opacity-[0.04]"
           style={{ backgroundImage: "linear-gradient(#1A3A8A 1px, transparent 1px), linear-gradient(90deg, #1A3A8A 1px, transparent 1px)", backgroundSize: "80px 80px" }}
         />
