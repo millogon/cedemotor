@@ -53,8 +53,8 @@ export default function Home() {
           </div>
 
           {/* Foto Federico */}
-          <div className="hidden md:flex items-center justify-center">
-            <div className="relative w-80 h-96 overflow-hidden shadow-2xl ring-4 ring-[#1A3A8A]/40">
+          <div className="flex items-center justify-center">
+            <div className="relative w-64 h-80 md:w-80 md:h-96 overflow-hidden shadow-2xl ring-4 ring-[#1A3A8A]/40">
               <Image
                 src="/federico.jpeg"
                 alt="Federico Cedeño"
