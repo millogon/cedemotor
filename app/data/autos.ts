@@ -15,20 +15,6 @@ export type Auto = {
 
 export const autos: Auto[] = [
   {
-    id: 1,
-    marca: "Toyota",
-    modelo: "Corolla",
-    año: 2022,
-    km: "18,000 km",
-    precio: "$22,500",
-    color: "Blanco Perla",
-    transmision: "Automático",
-    combustible: "Gasolina",
-    descripcion: "Excelente estado, único dueño, mantenimientos al día.",
-    disponible: true,
-    imagen: "https://images.unsplash.com/photo-1623869675781-80aa31012a5a?w=600&h=400&fit=crop",
-  },
-  {
     id: 2,
     marca: "Hyundai",
     modelo: "Tucson",
